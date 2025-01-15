@@ -4,8 +4,8 @@ from streamlit_folium import st_folium
 from utils.weather_api import get_weather
 
 # Configuração da página
-st.set_page_config(page_title="The Weather Forecast", page_icon="🌤️", layout="centered")
-st.title("🌤️ The Weather Forecast")
+st.set_page_config(page_title="Today's Climate", page_icon="🌤️", layout="centered")
+st.title("🌤️ Today's Climate")
 
 # Inicializando session_state para armazenar os dados
 if "weather_data" not in st.session_state:
@@ -30,6 +30,8 @@ if st.button("Get Weather"):
             "lon": weather_data["coord"]["lon"],
         }
 
+st.divider()
+
 # Exibir os dados do clima se disponíveis
 if st.session_state.weather_data:
     weather_data = st.session_state.weather_data
@@ -43,10 +45,11 @@ if st.session_state.weather_data:
     with col1:
         st.image(icon_url, width=120)
     with col2:
-        st.metric(label="Temperature", value=f"{weather_data['main']['temp']}°")
+        st.metric(label="Temperature:", value=f"{weather_data['main']['temp']}°")
         st.write(f"**Condition:** {weather_data['weather'][0]['description'].capitalize()}")
         st.write(f"**Humidity:** {weather_data['main']['humidity']}%")
     
+    st.divider()
     # Coordenadas da cidade
     lat, lon = st.session_state.map_data["lat"], st.session_state.map_data["lon"]
     

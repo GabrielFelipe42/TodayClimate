@@ -1,6 +1,6 @@
-# Weather Now: https://todayclimate.streamlit.app/
+# Today's Climate: https://todayclimate.streamlit.app/
 
-Weather Now é uma aplicação web interativa construída com **Python** e **Streamlit**, que permite aos usuários verificar as condições climáticas atuais de qualquer cidade ao redor do mundo. Utilizando a API OpenWeather, o aplicativo exibe informações em tempo real, como temperatura, condição climática e umidade, além de apresentar a localização no mapa.
+Today's Climate é uma aplicação web interativa construída com **Python** e **Streamlit**, que permite aos usuários verificar as condições climáticas atuais de qualquer cidade ao redor do mundo. Utilizando a API OpenWeather, o aplicativo exibe informações em tempo real, como temperatura, condição climática e umidade, além de apresentar a localização no mapa.
 
 ## 📋 Funcionalidades
 
